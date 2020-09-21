@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Lib</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/atom-one-light.min.css"
+      integrity="sha512-11xYl5MU0/AMaYnuBOXDDQdZnl5WGtLVidxqa0XUAXYf6cGnJShNpgtbmB/0MW6ypeev+9Bwj7I/J8wexX8ePw=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="scss/lib.css" />
+    <link rel="stylesheet" href="scss/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <ul class="d-flex">
+            <li><a href="#" class="active" data-target="getStarted">Get started</a></li>
+            <li><a href="#" data-target="modules">Modules & Services</a></li>
+            <li><a href="#" data-target="classes">Classes</a></li>
+            <li><a href="#" data-target="components">Components</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="main page active" id="getStarted">
+      <div class="container">
+        <div class="get-started block-center mb-20">
+          <div class="get-started-download">
+            <h4 class="mb-10">Click to download JS and CSS files</h4>
+            <div class="d-flex">
+              <a class="linkJS" href="./js/lib.js" download></a>
+              <a class="linkCSS" href="./scss/lib.css" download></a>
+            </div>
+            <h4 class="mb-10 mt-20">Connect CSS</h4>
+            <p class="mb-10">
+              Put the stylesheet &lt;link> into your &lt;head> before all other stylesheets to load
+              this library CSS
+            </p>
+            <span>Link example:</span>
+            <pre class="mt-10"><code>
+    &lt;link rel="stylesheet" href="yourFolder/lib.css"/>
+                    </code></pre>
+            <h4 class="mb-10 mt-20">Connect JS</h4>
+            <p class="mb-10">
+              Place the JS &lt;script> near the end of your page, right before the closing
+              &lt;/body> tag.
+            </p>
+            <span>Link example:</span>
+            <pre class="mt-10"><code>
+    &lt;script src="yourFolder/lib.js">&lt;/script>
+                    </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modules-and-services page" id="modules">
+      <div class="container">
+        <h1>modules</h1>
+      </div>
+    </div>
+
+    <div class="classes page" id="classes">
+      <div class="container">
+        <h2 class="text-center mb-20 mt-20">Display</h2>
+        <div class="classes-content block-center">
+          <pre><code>
+    .hidden {
+        visibility: hidden;
+    }
+    
+    .visible {
+        visibility: visible;
+    }
+    
+    .d-none {
+        display: none;
+    }
+    
+    .d-block {
+        display: block;
+    }
+    
+    .d-flex {
+        display: flex;
+    }
+    
+    .fd-colum {
+        flex-direction: column;
+    }
+    
+    .f-center {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .f-space-around {
+        justify-content: space-around;
+    }
+    
+    .f-space-beetwen {
+        justify-content: space-between;
+    }
+                </code></pre>
+        </div>
+
+        <h2 class="text-center mb-20 mt-20">Align</h2>
+        <div class="classes-content block-center">
+          <pre><code>
+                    .text-center {
+                        text-align: center;
+                    }
+                    
+                    .block-center {
+                        margin: 0 auto;
+                    }
+                </code></pre>
+        </div>
+
+        <h2 class="text-center mb-20 mt-20">Margin</h2>
+        <div class="classes-content block-center">
+          <pre><code>
+    .m-10 {
+        margin: 10px;
+    }
+    
+    .mt-10 {
+        margin-top: 10px;
+    }
+    
+    .mr-10 {
+        margin-right: 10px;
+    }
+    
+    .mb-10 {
+        margin-bottom: 10px;
+    }
+    
+    .ml-10 {
+        margin-left: 10px;
+    }
+    
+    .m-20 {
+        margin: 20px;
+    }
+    
+    .mt-20 {
+        margin-top: 20px;
+    }
+    
+    .mr-20 {
+        margin-right: 20px;
+    }
+    
+    .mb-20 {
+        margin-bottom: 20px;
+    }
+    
+    .ml-20 {
+        margin-left: 20px;
+    }
+                </code></pre>
+        </div>
+
+        <h2 class="text-center mb-20 mt-20">Padding</h2>
+        <div class="classes-content block-center">
+          <pre><code>
+    .p-10 {
+        padding: 10px;
+    }
+    
+    .pt-10 {
+        padding-top: 10px;
+    }
+    
+    .pr-10 {
+        padding-right: 10px;
+    }
+    
+    .pb-10 {
+        padding-bottom: 10px;
+    }
+    
+    .pl-10 {
+        padding-left: 10px;
+    }
+    
+    .p-20 {
+        padding: 20px;
+    }
+    
+    .pt-20 {
+        padding-top: 20px;
+    }
+    
+    .pr-20 {
+        padding-right: 20px;
+    }
+    
+    .pb-20 {
+        padding-bottom: 20px;
+    }
+    
+    .pl-20 {
+        padding-left: 20px;
+    }
+                </code></pre>
+        </div>
+
+        <h2 class="text-center mb-20 mt-20">Size</h2>
+        <div class="classes-content block-center">
+          <pre><code>
+    .w-100 {
+        width: 100%;
+    }
+    
+    .w-50 {
+        width: 50%;
+    }
+    
+    .w-75 {
+        width: 75%;
+    }
+    
+    .w-300 {
+        width: 300px;
+    }
+    
+    .w-500 {
+        width: 500px;
+    }
+    
+    .h-100 {
+        height: 100%;
+    }
+    
+    .h-50 {
+        height: 50%;
+    }
+    
+    .h-75 {
+        height: 75%;
+    }
+    
+    .h-300 {
+        height: 300px;
+    }
+    
+    .h-500 {
+        height: 500px;
+    }
+                </code></pre>
+        </div>
+
+        <h2 class="text-center mb-20 mt-20">Font</h2>
+        <div class="classes-content block-center">
+          <pre><code>
+    .fz-16 {
+        font-size: 16px;
+    }
+    
+    .fz-20 {
+        font-size: 20px;
+    }
+    
+    .fz-24 {
+        font-size: 24px;
+    }
+    
+    .bolt {
+        font-weight: bold;
+    }
+    
+    .thin {
+        font-weight: 300;
+    }
+    
+    .italic {
+        font-style: italic;
+    }
+    
+    .text-color-primary {
+        color: $primary;
+    }
+    
+    .text-color-success {
+        color: $success;
+    }
+    
+    .text-color-danger {
+        color: $danger;
+    }
+    
+    .text-color-warning {
+        color: $warning;
+    }
+    
+    .text-color-dark {
+        color: $dark;
+    }
+                </code></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="components page" id="components">
+      <!-- dropdown -->
+      <section>
+        <div class="container d-flex f-center fd-colum">
+          <div class="wrap">
+            <h2 class="text-center mb-20 mt-20">Dropdown menu</h2>
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton">
+                Dropdown example
+              </button>
+              <ul class="dropdown-menu" data-toggle-id="dropdownMenuButton">
+                <li>
+                  <a href="#" class="dropdown-item">Example 1</a>
+                </li>
+                <li>
+                  <a href="#" class="dropdown-item">Example 2</a>
+                </li>
+                <li>
+                  <a href="#" class="dropdown-item">Example 3</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab mt-20 block-center tab-custom">
+            <div class="tab-panel" data-tabpanel>
+              <div class="tab-item tab-item--active">HTML</div>
+              <div class="tab-item">SCSS</div>
+              <div class="tab-item">JS</div>
+            </div>
+            <div class="tab-content tab-content--active tab-custom-content">
+              <pre><code class="lang-html">
+    &lt;div class="dropdown">
+        &lt;button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton">
+            Dropdown example
+        &lt;/button>
+        &lt;ul class="dropdown-menu" data-toggle-id="dropdownMenuButton">
+            &lt;li>
+                &lt;a href="#" class="dropdown-item">Example 1&lt;/a>
+            &lt;/li>
+            &lt;li>
+                &lt;a href="#" class="dropdown-item">Example 2&lt;/a>
+            &lt;/li>
+            &lt;li>
+                &lt;a href="#" class="dropdown-item">Example 3&lt;/a>
+            &lt;/li>
+        &lt;/ul>
+    &lt;/div>
+                        </code></pre>
+            </div>
+            <div class="tab-content tab-custom-content">
+              <pre><code class="lang-css">
+    .dropdown {
+        position: relative;
+        display: inline-block;
+
+        &-toggle {
+            &:after {
+                content: '';
+                display: inline-block;
+                margin-left: 5px;
+                vertical-align: 3px;
+                border-top: 4px solid;
+                border-right: 4px solid transparent;
+                border-bottom: 0;
+                border-left: 4px solid transparent;
+            }
+        }
+
+        &-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 999;
+            list-style-type: none;
+            display: none;
+            border: 1px solid rgba(0, 0, 0, .15);
+            border-radius: 2px;
+            background-color: #fff;
+            min-width: 100%;
+            padding: 10px 0;
+        }
+
+        &-item {
+            display: block;
+            width: 100%;
+            padding: 7px 10px;
+            color: $dark;
+            background-color: transparent;
+            border: 0;
+            cursor: pointer;
+            text-decoration: none;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, .05);
+            }
+        }
+    }
+                        </code></pre>
+            </div>
+            <div class="tab-content tab-custom-content">
+              <pre><code class="lang-css">
+    $.prototype.dropdown = function () {
+        for (let i = 0; i < this.length; i++) {
+            const id = this[i].getAttribute('id');
+        
+            $(this[i]).click(() => {
+            $(`[data-toggle-id="${id}"]`).fadeToggle(300);
+            });
+        }
+        };
+        $('.dropdown-toggle').dropdown();
+                        </code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- carousel -->
+      <section>
+        <div class="container">
+          <h2 class="text-center mt-20">Carousel</h2>
+
+          <div class="carousel mt-20" id="exampleCarousel">
+            <ol class="carousel-indicators">
+              <li data-slide-to="0" class="active"></li>
+              <li data-slide-to="1"></li>
+              <li data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-slides">
+                <div class="carousel-item">
+                  <img src="./Images/car1.jpeg" alt="img" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./Images/car2.jpg" alt="img" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./Images/car3.jpg" alt="img" />
+                </div>
+              </div>
+            </div>
+
+            <a href="#" class="carousel-prev" data-slide="prev">
+              <span class="carousel-prev-icon">&lt;</span>
+            </a>
+
+            <a href="#" class="carousel-next" data-slide="next">
+              <span class="carousel-next-icon">&gt;</span>
+            </a>
+          </div>
+
+          <div class="tab mt-20 block-center tab-custom">
+            <div class="tab-panel" data-tabpanel>
+              <div class="tab-item tab-item--active">HTML</div>
+              <div class="tab-item">SCSS</div>
+              <div class="tab-item">JS</div>
+            </div>
+            <div class="tab-content tab-content--active tab-custom-content">
+              <pre><code class="language-html"> 
+    &lt;div class="carousel mt-20" id="exampleCarousel">
+    &lt;ol class="carousel-indicators">
+        &lt;li data-slide-to="0" class="active">&lt;/li>
+        &lt;li data-slide-to="1">&lt;/li>
+        &lt;li data-slide-to="2">&lt;/li>
+    &lt;/ol>
+    &lt;div class="carousel-inner">
+        &lt;div class="carousel-slides">
+            &lt;div class="carousel-item">
+                &lt;img src="https://scx2.b-cdn.net/gfx/news/hires/2019/2-nature.jpg" alt="img" />
+            &lt;/div>
+            &lt;div class="carousel-item">
+                &lt;img src="https://miro.medium.com/max/8256/1*5lpiSFo6j5dhrr6Z6RFd8Q.jpeg" alt="img" />
+            &lt;/div>
+            &lt;div class="carousel-item">
+                &lt;img src="https://i.insider.com/5efe10533f73703c02240358?width=1100&format=jpeg&auto=webp"
+                    alt="img" />
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+
+    &lt;a href="#" class="carousel-prev" data-slide="prev">
+        &lt;span class="carousel-prev-icon">&lt;&lt;/span>
+    &lt;/a>
+
+    &lt;a href="#" class="carousel-next" data-slide="next">
+        &lt;span class="carousel-next-icon">&gt;&lt;/span>
+    &lt;/a>
+    &lt;/div>
+                        </code></pre>
+            </div>
+            <div class="tab-content tab-custom-content">
+              <pre><code class="language-css"> 
+    .carousel {
+        display: block;
+        margin: 0 auto;
+        width: 900px;
+        position: relative;
+
+        &-indicators {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 15;
+            display: flex;
+            justify-content: center;
+            margin: 0 15%;
+            list-style: none;
+
+            li {
+                box-sizing: content-box;
+                flex: 0 1 auto;
+                width: 30px;
+                height: 6px;
+                margin: 0 3px;
+                cursor: pointer;
+                background-color: #fff;
+                background-clip: padding-box;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                opacity: .5;
+                transition: opacity .6s ease;
+            }
+
+            .active {
+                opacity: 1;
+            }
+        }
+
+        &-inner {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        &-slides {
+            height: 100%;
+            display: flex;
+        }
+
+        &-item {
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-prev,
+        &-next {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 15%;
+            z-index: 1;
+            color: #fff;
+            opacity: .5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 40px;
+            transition: opacity .15s ease;
+            text-decoration: none;
+
+            &:hover {
+                opacity: .8;
+                background-color: rgba(0, 0, 0, .2);
+            }
+        }
+
+        &-prev {
+            left: 0;
+        }
+
+        &-next {
+            right: 0;
+        }
+    }
+                        </code></pre>
+            </div>
+            <div class="tab-content tab-custom-content">
+              <pre><code class="language-js"> 
+    $.prototype.carousel = function () {
+        for (let i = 0; i < this.length; i++) {
+            const width = window.getComputedStyle(this[i].querySelector('.carousel-inner')).width;
+            const slides = this[i].querySelectorAll('.carousel-item');
+            const slidesField = this[i].querySelector('.carousel-slides');
+            const indicators = this[i].querySelectorAll('.carousel-indicators li');
+        
+            slidesField.style.width = 100 * slides.length + '%';
+            slides.forEach(slide => (slide.style.width = width));
+        
+            let offset = 0;
+            let slideIndex = 0;
+        
+            $(this[i].querySelector('[data-slide="next"]')).click(e => {
+            e.preventDefault();
+            if (offset == +width.replace(/\D/g, '') * (slides.length - 1)) {
+                offset = 0;
+            } else {
+                offset += +width.replace(/\D/g, '');
+            }
+        
+            slidesField.style.transform = `translateX(-${offset}px)`;
+        
+            if (slideIndex == slides.length - 1) {
+                slideIndex = 0;
+            } else {
+                slideIndex++;
+            }
+        
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            indicators[slideIndex].classList.add('active');
+            });
+        
+            $(this[i].querySelector('[data-slide="prev"]')).click(e => {
+            e.preventDefault();
+            if (offset == 0) {
+                offset = +width.replace(/\D/g, '') * (slides.length - 1);
+            } else {
+                offset -= +width.replace(/\D/g, '');
+            }
+        
+            slidesField.style.transform = `translateX(-${offset}px)`;
+        
+            if (slideIndex == 0) {
+                slideIndex = slides.length - 1;
+            } else {
+                slideIndex--;
+            }
+        
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            indicators[slideIndex].classList.add('active');
+            });
+        
+            const sliderId = this[i].getAttribute('id');
+            $(`#${sliderId} .carousel-indicators li`).click(e => {
+            const slideTo = e.target.getAttribute('data-slide-to');
+        
+            slideIndex = slideTo;
+            offset = +width.replace(/\D/g, '') * slideTo;
+        
+            slidesField.style.transform = `translateX(-${offset}px)`;
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            indicators[slideIndex].classList.add('active');
+            });
+        }
+        };
+        
+        $('.carousel').carousel();
+                        </code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- tabs  -->
+      <section>
+        <div class="container">
+          <h2 class="text-center mt-20">Tabs</h2>
+          <div class="tab mt-20 block-center">
+            <div class="tab-panel" data-tabpanel>
+              <div class="tab-item tab-item--active">Content 1</div>
+              <div class="tab-item">Content 2</div>
+              <div class="tab-item">Content 3</div>
+            </div>
+            <div class="tab-content tab-content--active">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              <br />
+              <br />
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium ullam, numquam
+              pariatur inventore adipisci error ratione odio voluptatem.
+            </div>
+            <div class="tab-content">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium ullam, numquam
+              pariatur inventore. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Accusantium ullam, numquam pariatur inventore adipisci error ratione odio voluptatem.
+            </div>
+            <div class="tab-content">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium ullam, numquam
+              pariatur inventore adipisci error ratione odio voluptatem.
+              <br />
+              <br />
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </div>
+            <div class="tab-content">Lorem ipsum, dolor.</div>
+          </div>
+
+          <div class="tab mt-20 block-center tab-custom">
+            <div class="tab-panel" data-tabpanel>
+              <div class="tab-item tab-item--active">HTML</div>
+              <div class="tab-item">SCSS</div>
+              <div class="tab-item">JS</div>
+            </div>
+            <div class="tab-content tab-content--active tab-custom-content">
+              <pre><code class="language-html">
+    &lt;div class="tab mt-20 block-center">
+    &lt;div class="tab-panel" data-tabpanel>
+        &lt;div class="tab-item tab-item--active">Content 1&lt;/div>
+        &lt;div class="tab-item">Content 2&lt;/div>
+        &lt;div class="tab-item">Content 3&lt;/div>
+    &lt;/div>
+    &lt;div class="tab-content tab-content--active">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        &lt;br />
+        &lt;br />
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium ullam, numquam
+        pariatur inventore adipisci error ratione odio voluptatem.
+    &lt;/div>
+    &lt;div class="tab-content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium ullam, numquam
+        pariatur inventore.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium ullam, numquam
+        pariatur inventore adipisci error ratione odio voluptatem.
+    &lt;/div>
+    &lt;div class="tab-content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium ullam, numquam
+        pariatur inventore adipisci error ratione odio voluptatem.
+        &lt;br />
+        &lt;br />
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+    &lt;/div>
+    &lt;div class="tab-content">Lorem ipsum, dolor.&lt;/div>
+    &lt;/div>
+                        </code></pre>
+            </div>
+            <div class="tab-content tab-custom-content">
+              <pre><code class="language-css">
+    .tab {
+        max-width: 500px;
+
+        &-panel {
+            display: flex;
+            width: 100%;
+            min-height: 50px;
+            border: 1px solid rgba(0, 0, 0, .2);
+            border-radius: 4px 4px 0 0;
+        }
+
+        &-item {
+            font-size: 18px;
+            line-height: 27px;
+            padding: 10px 20px;
+            border-right: 1px solid rgba(0, 0, 0, .2);
+            cursor: pointer;
+
+            &:last-child {
+                border-right: none;
+            }
+
+            &--active {
+                background-color: rgba(0, 0, 0, .1);
+            }
+        }
+
+        &-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid rgba(0, 0, 0, .2);
+            border-top: none;
+            border-radius: 0 0 4px 4px;
+
+            &--active {
+                display: block;
+            }
+        }
+    }
+                        </code></pre>
+            </div>
+            <div class="tab-content tab-custom-content">
+              <pre><code class="language-js">
+    $.prototype.tab = function () {
+        for (let i = 0; i < this.length; i++) {
+            $(this[i]).on('click', () => {
+            $(this[i])
+                .addClass('tab-item--active')
+                .siblings()
+                .removeClass('tab-item--active')
+                .closest('.tab')
+                .find('.tab-content')
+                .removeClass('tab-content--active')
+                .eq($(this[i]).index())
+                .addClass('tab-content--active');
+            });
+        }
+        };
+        
+        $('[data-tabpanel] .tab-item').tab();
+                        </code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- accordion -->
+      <section>
+        <div class="container">
+          <h2 class="text-center mt-20">Accordion</h2>
+          <div class="accordion mt-20 mb-20 block-center">
+            <div class="accordion-head">
+              <span>Collapse firs element</span>
+            </div>
+            <div class="accordion-content">
+              <div class="accordion-inner">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni at amet facere eum
+                assumenda dolor nemo totam, aperiam blanditiis officia fugiat animi laborum impedit
+                quas ipsam odio eaque quod repellendus.
+              </div>
+            </div>
+            <div class="accordion-head">
+              <span>Collapse second element</span>
+            </div>
+            <div class="accordion-content">
+              <div class="accordion-inner">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni at amet facere eum
+                assumenda dolor nemo totam, aperiam blanditiis officia fugiat animi laborum impedit
+                quas ipsam odio eaque quod repellendus.
+              </div>
+            </div>
+          </div>
+
+          <div class="tab mt-20 block-center tab-custom">
+            <div class="tab-panel" data-tabpanel>
+              <div class="tab-item tab-item--active">HTML</div>
+              <div class="tab-item">SCSS</div>
+              <div class="tab-item">JS</div>
+            </div>
+            <div class="tab-content tab-content--active tab-custom-content">
+              <pre><code class="language-html">
+    &lt;div class="accordion mt-20 mb-20 block-center">
+    &lt;div class="accordion-head">
+        &lt;span>Collapse firs element&lt;/span>
+    &lt;/div>
+    &lt;div class="accordion-content">
+        &lt;div class="accordion-inner">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni at amet facere eum
+            assumenda dolor nemo totam, aperiam blanditiis officia fugiat animi laborum impedit quas
+            ipsam odio eaque quod repellendus.
+        &lt;/div>
+    &lt;/div>
+    &lt;div class="accordion-head">
+        &lt;span>Collapse second element&lt;/span>
+    &lt;/div>
+    &lt;div class="accordion-content">
+        &lt;div class="accordion-inner">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni at amet facere eum
+            assumenda dolor nemo totam, aperiam blanditiis officia fugiat animi laborum impedit quas
+            ipsam odio eaque quod repellendus.
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                        </code></pre>
+            </div>
+            <div class="tab-content tab-custom-content">
+              <pre><code class="language-css">
+    .accordion {
+        max-width: 500px;
+    
+        &-head {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            min-height: 50px;
+            padding: 0 20px;
+            border: 1px solid rgba(0, 0, 0, .2);
+            font-size: 18px;
+            color: $dark;
+            cursor: pointer;
+    
+            &--active {
+                color: $primary;
+            }
+        }
+    
+        &-content {
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: opacity .5s, height .6s, padding .1s;
+            background-color: #fff;
+            border: 1px solid rgba(224, 211, 211, 1);
+            border-top: none;
+            border-radius: 0 0 4px 4px;
+    
+            &--active {
+                overflow: visible;
+                opacity: 1;
+            }
+        }
+    
+        &-inner {
+            display: block;
+            padding: 20px;
+        }
+    }
+                        </code></pre>
+            </div>
+            <div class="tab-content tab-custom-content">
+              <pre><code class="language-js">
+    $.prototype.accordion = function (
+        headActive = 'accordion-head--active',
+        contentActive = 'accordion-content--active',
+        paddings = 40
+        ) {
+        for (let i = 0; i < this.length; i++) {
+            $(this[i]).click(() => {
+            $(this[i]).toggleClass(headActive);
+            $(this[i].nextElementSibling).toggleClass(contentActive);
+        
+            if (this[i].classList.contains(headActive)) {
+                this[i].nextElementSibling.style.height =
+                this[i].nextElementSibling.scrollHeight + paddings + 'px';
+            } else {
+                this[i].nextElementSibling.style.height = '0px';
+            }
+            });
+        }
+        };
+        
+        $('.accordion-head').accordion();
+                        </code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- modal -->
+      <section>
+        <div class="container d-flex f-center fd-colum">
+          <dsiv class="wrap">
+            <h2 class="text-center mb-20 mt-20">Modal</h2>
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+              Modal trigger
+            </a>
+          </dsiv>
+
+          <div class="modal" id="exampleModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <button class="close" data-close>
+                  <span>&times;</span>
+                </button>
+                <div class="modal-header">
+                  <div class="modal-title">Modal title</div>
+                </div>
+                <div class="modal-body">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis minima laboriosam
+                  ut, nemo enim quos cum aspernatur omnis blanditiis commodi?
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-danger" data-close>Close</button>
+                  <button class="btn btn-success">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab mt-20 block-center tab-custom">
+            <div class="tab-panel" data-tabpanel>
+              <div class="tab-item tab-item--active">HTML</div>
+              <div class="tab-item">SCSS</div>
+              <div class="tab-item">JS</div>
+            </div>
+            <div class="tab-content tab-content--active tab-custom-content">
+              <pre><code class="language-html">
+    &lt;div class="modal" id="exampleModal">
+    &lt;div class="modal-dialog">
+        &lt;div class="modal-content">
+            &lt;button class="close" data-close>
+                &lt;span>&times;&lt;/span>
+            &lt;/button>
+            &lt;div class="modal-header">
+                &lt;div class="modal-title">Modal title&lt;/div>
+            &lt;/div>
+            &lt;div class="modal-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis
+                minima
+                laboriosam ut, nemo enim quos cum aspernatur omnis blanditiis commodi? &lt;/div>
+            &lt;div class="modal-footer">
+                &lt;button class="btn btn-danger" data-close>Close&lt;/button>
+                &lt;button class="btn btn-success">Save&lt;/button>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                        </code></pre>
+            </div>
+            <div class="tab-content tab-custom-content">
+              <pre><code class="language-css">
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1100;
+        display: none;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.5);
+        
+        &-dialog {
+            max-width: 500px;
+            margin: 40px auto;
+        }
+        
+        &-content {
+            position: relative;
+            width: 100%;
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            max-height: 80vh;
+            overflow-y: auto;
+        
+            .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 30px;
+            color: #000;
+            opacity: 0.5;
+            font-weight: 700;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            }
+        }
+        
+        &-header,
+        &-body {
+            padding: 15px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        &-title {
+            font-weight: 500;
+            font-size: 20px;
+        }
+        
+        &-footer {
+            padding: 15px;
+        }
+        }
+                        </code></pre>
+            </div>
+            <div class="tab-content tab-custom-content">
+              <pre><code class="language-js">
+$.prototype.modal = function (created) {
+    const scroll = calcScroll();
+    
+    for (let i = 0; i < this.length; i++) {
+        const target = this[i].getAttribute('data-target');
+    
+        $(this[i]).click(e => {
+        e.preventDefault();
+        $(target).fadeIn(500);
+        document.body.style.overflow = 'hidden';
+        document.body.style.marginRight = `${scroll}px`;
+        });
+    
+        const closeElements = document.querySelectorAll(`${target} [data-close]`);
+        closeElements.forEach(elem => {
+        $(elem).click(() => {
+            $(target).fadeOut(500);
+            smoothClose();
+        });
+        });
+    
+        $(target).click(e => {
+        if (e.target.classList.contains('modal')) {
+            $(target).fadeOut(500);
+            smoothClose();
+        }
+        });
+    
+        const smoothClose = () => {
+        setTimeout(() => {
+            document.body.style.overflow = '';
+            document.body.style.marginRight = '';
+    
+            if (created) document.querySelector(target).remove();
+        }, 500);
+        };
+    }
+    };
+    
+    $('[data-toggle="modal"]').modal();
+    
+    $.prototype.createModal = function ({ text, btns } = {}) {
+    for (let i = 0; i < this.length; i++) {
+        let modal = document.createElement('div');
+        modal.classList.add('modal');
+        modal.setAttribute('id', this[i].getAttribute('data-target').slice(1));
+    
+        // btns = { count: num, settings: [[text, ((classNames = []), close, cb)]]};
+    
+        const buttons = [];
+        for (let j = 0; j < btns.count; j++) {
+        let btn = document.createElement('button');
+        btn.classList.add('btn', ...btns.settings[j][1]);
+        btn.textContent = btns.settings[j][0];
+        if (btns.settings[j][2]) {
+            btn.setAttribute('data-close', 'true');
+        }
+        if (btns.settings[j][3] && typeof btns.settings[j][3] === 'function') {
+            btn.addEventListener('click', btns.settings[j][3]);
+        }
+    
+        buttons.push(btn);
+        }
+    
+        modal.innerHTML = `
+                &lt;div class="modal-dialog">
+                &lt;div class="modal-content">
+                    &lt;button class="close" data-close>
+                        &lt;span>&times;&lt;/span>
+                    &lt;/button>
+                    &lt;div class="modal-header">
+                        &lt;div class="modal-title">
+                            ${text.title}
+                        &lt;/div>
+                    &lt;/div>
+                    &lt;div class="modal-body">
+                        ${text.body}
+                    &lt;/div>
+                    &lt;div class="modal-footer">
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+        `;
+    
+        modal.querySelector('.modal-footer').append(...buttons);
+        document.body.append(modal);
+    
+        $(this[i]).modal(true);
+        $(this[i].getAttribute('data-target')).fadeIn(500);
+    }
+    };
+                        </code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- cards -->
+      <section>
+        <div class="container">
+          <h2 class="text-center mb-20 mt-20">Cards</h2>
+          <div class="d-flex f-center">
+            <div class="card">
+              <img
+                src="https://photolemur.com/img/home/top-slider/after-1440.jpg"
+                class="card-img"
+                alt="photo"
+              />
+              <div class="card-body">
+                <span class="card-tittle">Card tittle 1</span>
+                <p class="card-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro labore ipsam sed.
+                </p>
+                <a href="#" id="trigger" class="btn btn-primary">Link to...</a>
+              </div>
+            </div>
+
+            <div class="card ml-20 mr-20">
+              <img
+                src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/autumn-in-the-white-mountains-of-new-hampshire-royalty-free-image-841380450-1531931081.jpg"
+                class="card-img"
+                alt="photo"
+              />
+              <div class="card-body">
+                <span class="card-tittle">Card tittle 2</span>
+                <p class="card-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro labore ipsam sed.
+                </p>
+                <a href="#" id="trigger" class="btn btn-primary">Link to...</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="https://media-cdn.tripadvisor.com/media/photo-s/0e/62/13/51/inverno-nelle-dolomiti.jpg"
+                class="card-img"
+                alt="photo"
+              />
+              <div class="card-body">
+                <span class="card-tittle">Card tittle 3</span>
+                <p class="card-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro labore ipsam sed.
+                </p>
+                <a href="#" id="trigger" class="btn btn-primary">Link to...</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab mt-20 block-center tab-custom">
+            <div class="tab-panel" data-tabpanel>
+              <div class="tab-item tab-item--active">HTML</div>
+              <div class="tab-item">SCSS</div>
+            </div>
+            <div class="tab-content tab-content--active tab-custom-content">
+              <pre><code class="language-html">
+    &lt;div class="card">
+            &lt;img src="https://photolemur.com/img/home/top-slider/after-1440.jpg" 
+            class="card-img" alt="photo" />
+            &lt;div class="card-body">
+                &lt;span class="card-tittle">Card tittle 1&lt;/span>
+                &lt;p class="card-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro labore ipsam sed.
+                &lt;/p>
+                &lt;a href="#" id="trigger" class="btn btn-primary">
+                Link to...
+                &lt;/a>
+            &lt;/div>
+    &lt;/div>
+                        </code></pre>
+            </div>
+            <div class="tab-content tab-custom-content">
+              <pre><code class="language-css">
+    .card {
+        width: 300px;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 4px;
+        box-shadow: 5px 5px 30px rgba(0, 0, 0, .1);
+    
+        &-img {
+            width: 100%;
+        }
+    
+        &-body {
+            padding: 20px;
+        }
+    
+        &-tytle {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    
+        &-text {
+            margin-bottom: 10px;
+        }
+    
+        a {
+            text-decoration: none;
+        }
+    }
+                        </code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- buttons -->
+      <section>
+        <div class="container">
+          <h2 class="text-center mb-20 mt-20">Buttons</h2>
+          <div class="wrap d-flex f-center mb-20">
+            <a href="#" class="btn btn-primary mr-20">Primary</a>
+            <a href="#" class="btn btn-success mr-20">Success</a>
+            <a href="#" class="btn btn-warning mr-20">Warning</a>
+            <a href="#" class="btn btn-danger mr-20">Danger</a>
+            <a href="#" class="btn btn-dark mr-20">Dark</a>
+          </div>
+          <div class="wrap d-flex f-center">
+            <a href="#" class="btn btn-outline-primary mr-20">Primary</a>
+            <a href="#" class="btn btn-outline-success mr-20">Success</a>
+            <a href="#" class="btn btn-outline-warning mr-20">Warning</a>
+            <a href="#" class="btn btn-outline-danger mr-20">Danger</a>
+            <a href="#" class="btn btn-outline-dark mr-20">Dark</a>
+          </div>
+          <div class="tab mt-20 block-center tab-custom">
+            <div class="tab-panel" data-tabpanel>
+              <div class="tab-item tab-item--active">HTML</div>
+              <div class="tab-item">SCSS</div>
+            </div>
+            <div class="tab-content tab-content--active tab-custom-content">
+              <pre><code class="language-html">
+    &lt;a href="#" class="btn btn-primary mr-20">Primary&lt;/a>
+    &lt;a href="#" class="btn btn-success mr-20">Success&lt;/a>
+    &lt;a href="#" class="btn btn-warning mr-20">Warning&lt;/a>
+    &lt;a href="#" class="btn btn-danger mr-20">Danger&lt;/a>
+    &lt;a href="#" class="btn btn-dark mr-20">Dark&lt;/a>
+
+    &lt;a href="#" class="btn btn-outline-primary mr-20">Primary&lt;/a>
+    &lt;a href="#" class="btn btn-outline-success mr-20">Success&lt;/a>
+    &lt;a href="#" class="btn btn-outline-warning mr-20">Warning&lt;/a>
+    &lt;a href="#" class="btn btn-outline-danger mr-20">Danger&lt;/a>
+    &lt;a href="#" class="btn btn-outline-dark mr-20">Dark&lt;/a>
+                        </code></pre>
+            </div>
+            <div class="tab-content tab-custom-content">
+              <pre><code class="language-css">
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 1px solid $primary;
+        background-color: transparent;
+        border-radius: 4px;
+        cursor: pointer;
+        color: $dark;
+        font-weight: 400;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 14px;
+        line-height: 1.5;
+        transition: all .2s;
+    
+        &:hover {
+            background-color: $primary;
+            color: #fff;
+        }
+    
+        &-primary {
+            background-color: $primary;
+            border-color: $primary;
+            color: #fff;
+    
+            &:hover {
+                background-color: darken($primary, 10%);
+            }
+        }
+    
+        &-success {
+            background-color: $success;
+            border-color: $success;
+            color: #fff;
+    
+            &:hover {
+                background-color: darken($success, 10%);
+            }
+        }
+    
+        &-danger {
+            background-color: $danger;
+            border-color: $danger;
+            color: #fff;
+    
+            &:hover {
+                background-color: darken($danger, 10%);
+            }
+        }
+    
+        &-warning {
+            background-color: $warning;
+            border-color: $warning;
+            color: #fff;
+    
+            &:hover {
+                background-color: darken($warning, 10%);
+            }
+        }
+    
+        &-dark {
+            background-color: $dark;
+            border-color: $dark;
+            color: #fff;
+    
+            &:hover {
+                background-color: darken($dark, 10%);
+            }
+        }
+    
+        &-outline-primary {
+            border-color: $primary;
+            color: $primary;
+    
+            &:hover {
+                background-color: $primary;
+            }
+        }
+    
+        &-outline-success {
+            border-color: $success;
+            color: $success;
+    
+            &:hover {
+                background-color: $success;
+            }
+        }
+    
+        &-outline-danger {
+            border-color: $danger;
+            color: $danger;
+    
+            &:hover {
+                background-color: $danger;
+            }
+        }
+    
+        &-outline-warning {
+            border-color: $warning;
+            color: $warning;
+    
+            &:hover {
+                background-color: $warning;
+            }
+        }
+    
+        &-outline-dark {
+            border-color: $dark;
+            color: $dark;
+    
+            &:hover {
+                background-color: $dark;
+            }
+        }
+    
+        &-block {
+            display: block;
+            width: 100%;
+        }
+    }
+                        </code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>hello</footer>
+
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.0/build/highlight.min.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

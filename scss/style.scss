@@ -1,0 +1,115 @@
+body {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: #025fff;
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  left: 0;
+  top: 0;
+
+  ul {
+    list-style: none;
+    padding: 25px 0;
+
+    a {
+      color: #fff;
+      font-size: 18px;
+      padding: 25px 10px;
+    }
+
+    .active {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.page {
+  display: none;
+  margin-top: 100px;
+
+  &.active {
+    display: block;
+  }
+}
+
+.carousel-inner {
+  width: 900px;
+}
+
+.main {
+  .get-started {
+    width: 700px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+
+    &-download {
+      padding: 20px;
+      font-size: 17px;
+
+      .linkJS,
+      .linkCSS {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100px;
+        width: 100px;
+      }
+
+      .linkJS {
+        background-image: url(../Images/jsLogo.png);
+        margin-right: 20px;
+      }
+
+      .linkCSS {
+        background-image: url(../Images/cssLogo.png);
+        height: 90px;
+        width: 90px;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+.classes {
+  &-content {
+    width: 700px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    max-height: 400px;
+    overflow-y: scroll;
+  }
+}
+
+.tab-custom {
+  max-width: 700px;
+
+  &-content {
+    padding: 0px;
+    background-color: rgb(250, 250, 250);
+    height: 400px;
+    overflow-y: scroll;
+    width: 700px;
+
+    &--active {
+      display: block;
+    }
+  }
+}
+
+footer {
+  position: sticky;
+  margin-top: 50px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  background-color: red;
+  z-index: 1000;
+}
