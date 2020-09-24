@@ -17,13 +17,13 @@ header {
 
 header ul {
   list-style: none;
-  padding: 25px 0;
+  padding: 20px 0;
 }
 
 header ul a {
   color: #fff;
   font-size: 18px;
-  padding: 25px 10px;
+  padding: 20px 10px;
 }
 
 header ul .active {
@@ -75,7 +75,8 @@ header ul .active {
   margin-top: 5px;
 }
 
-.classes-content {
+.classes-content,
+.modules-and-services-content {
   width: 700px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 4px;
@@ -106,8 +107,26 @@ footer {
   right: 0;
   left: 0;
   bottom: 0;
-  height: 50px;
-  background-color: red;
-  z-index: 1000;
+  height: 25px;
+  background-color: #025fff;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer a {
+  color: #fff;
+  padding: 3px;
+}
+
+footer a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 /*# sourceMappingURL=style.css.map */

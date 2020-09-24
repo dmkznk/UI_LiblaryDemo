@@ -1,51 +1,62 @@
 document.addEventListener('DOMContentLoaded', event => {
-    document.querySelectorAll('pre code').forEach(block => {
-        hljs.highlightBlock(block);
-    });
+  document.querySelectorAll('pre code').forEach(block => {
+    hljs.highlightBlock(block);
+  });
 
-    navigation('nav', 'nav a', '.page', 'active');
-    fixScrollModal();
+  navigation('nav', 'nav a', '.page', 'active');
+  fixScrollModal();
+
+  $('body')
+    .get('https://jsonplaceholder.typicode.com/posts/1')
+    .then(j => console.log(j));
 });
 
 const navigation = (navSelector, linksSelector, pagesSelector, activeClass) => {
-    const nav = document.querySelector(navSelector);
-    const links = document.querySelectorAll(linksSelector);
-    const pages = document.querySelectorAll(pagesSelector);
+  const nav = document.querySelector(navSelector);
+  const links = document.querySelectorAll(linksSelector);
+  const pages = document.querySelectorAll(pagesSelector);
 
-    nav.addEventListener('click', e => {
-        const target = e.target;
+  nav.addEventListener('click', e => {
+    const target = e.target;
 
-        if (target.tagName === 'A') {
-            links.forEach(link => link.classList.remove(activeClass));
-            target.classList.add(activeClass);
+    if (target.tagName === 'A') {
+      links.forEach(link => link.classList.remove(activeClass));
+      target.classList.add(activeClass);
 
-            pages.forEach(page => {
-                page.classList.remove(activeClass);
+      pages.forEach(page => {
+        page.classList.remove(activeClass);
 
-                if (page.getAttribute('id') === target.getAttribute('data-target')) {
-                    page.classList.add(activeClass);
-                }
-            });
+        if (page.getAttribute('id') === target.getAttribute('data-target')) {
+          page.classList.add(activeClass);
         }
-    });
+      });
+    }
+  });
 };
 
 const fixScrollModal = () => {
-    const modalTriger = document.querySelector('[data-toggle="modal"]');
-    const header = document.querySelector('header');
-    const body = document.querySelector('body');
-    const closeElements = document.querySelectorAll('[data-close]');
+  const modalTriger = document.querySelector('[data-toggle="modal"]');
+  const header = document.querySelector('header');
+  const body = document.querySelector('body');
+  const closeElements = document.querySelectorAll('[data-close]');
+  const modalWindow = document.querySelector('#exampleModal');
 
-    modalTriger.addEventListener('click', () => {
-        const bodyMarginRight = window.getComputedStyle(body).marginRight;
-        header.style.right = bodyMarginRight;
-    });
+  modalTriger.addEventListener('click', () => {
+    const bodyMarginRight = window.getComputedStyle(body).marginRight;
+    header.style.right = bodyMarginRight;
+  });
 
-    const smoothClose = () => {
-        setTimeout(() => {
-            header.style.right = '0';
-        }, 500);
-    };
+  const smoothClose = () => {
+    setTimeout(() => {
+      header.style.right = '0';
+    }, 500);
+  };
 
-    closeElements.forEach(elem => elem.addEventListener('click', smoothClose));
+  closeElements.forEach(elem => elem.addEventListener('click', smoothClose));
+
+  modalWindow.addEventListener('click', e => {
+    if (e.target.classList.contains('modal')) {
+      smoothClose();
+    }
+  });
 };

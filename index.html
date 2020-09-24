@@ -66,7 +66,237 @@
 
     <div class="modules-and-services page" id="modules">
       <div class="container">
-        <h1>modules</h1>
+        <h2 class="text-center mb-20 mt-20">Main method</h2>
+        <div class="modules-and-services-content block-center">
+          <pre><code class="language-js">
+    $(selector);
+
+    // This method takes one argument (selector), and it always returs you an object
+    // with your elemet, or elemets. 
+    // Also this object always have all another methods of the library in it's __proto__. 
+
+    // IMPORTANT to know, that almost every method here returns you object which contains
+    // __proto__ with all other methods of the library.
+    // So, you can use chaining.
+
+    // For example, if you run main method with 'body' selector
+    // You will get object like this:
+
+    {0: body, length: 1}
+    0: body
+    length: 1
+    __proto__: Object
+
+    // And it's __proto__ would looks like this:
+
+    accordion: ƒ (t="accordion-head--active",e="accordion-content--active",n=40)
+    addAttribute: ƒ (t,e=!0)
+    addClass: ƒ (...t)
+    animationOverTime: ƒ (t,e,n)
+    carousel: ƒ ()
+    click: ƒ (t)
+    closest: ƒ (t)
+    createModal: ƒ ({text:t,btns:e}={})
+    deleteAttribute: ƒ (t)
+    dropdown: ƒ ()
+    eq: ƒ (t)
+    fadeIn: ƒ (t,e="block",n)
+    fadeOut: ƒ (t,e)
+    fadeToggle: ƒ (t,e="block",n)
+    find: ƒ (t)
+    get: async ƒ (t,e="json")
+    hide: ƒ ()
+    html: ƒ (t)
+    index: ƒ ()
+    init: ƒ (t)
+    modal: ƒ (t)
+    off: ƒ (t,e)
+    on: ƒ (t,e)
+    post: async ƒ (t,e,n="text")
+    removeClass: ƒ (...t)
+    show: ƒ ()
+    siblings: ƒ ()
+    tab: ƒ ()
+    toggle: ƒ ()
+    toggleAttribute: ƒ (t)
+    toggleClass: ƒ (t)
+    constructor: ƒ (t)
+    __proto__: Object
+            </code></pre>
+        </div>
+
+        <h2 class="text-center mb-20 mt-20">Hendlers</h2>
+        <div class="modules-and-services-content block-center">
+          <pre><code class="language-js" >
+    on(eventName, callback); 
+
+    // As firs argument this method takes 'eventName',
+    // such as 'click', 'submit', 'mouseover', 'keydown'...
+    // And the second argument is 'callback' function, what you want to do on this event.
+
+    off(eventName, callback); 
+
+    // This method is the opposite to previous one. It removes event,
+    // that you don't need anymore.
+
+    click(handler); 
+
+    // As you can guess, this method takes a function that you want to call on 'click'.
+          </code></pre>
+        </div>
+
+        <h2 class="text-center mb-20 mt-20">Effects</h2>
+        <div class="modules-and-services-content block-center">
+          <pre><code class="language-js">
+    fadeIn(duration, display, finish) 
+
+    // This method takes 'duration' of the animation, and 'display' type, that you want 
+    // your element to have, but it is optional, as default it would be 'block'.
+    // Also it takes optionat argument 'finish', this should be a function that you want you run,
+    // after animation ends.
+
+    fadeOut(duration, finish)
+
+    // This one is the opposite to previous one. It dont need 'display' settings because it always 
+    // becomes 'none', after 'duration' ends. 'Finish' here works apsolutely the same,
+    // as in previous method.
+
+    fadeToggle(duration, display, finish) 
+
+    // As you can guess, this one is kind of two in one. If your element has 'display: none;',
+    // this method will set 'display' to what you put as argument, or to 'block',
+    // if you haven't put any.
+    // And if your element is visible, it would be set to 'display: none;',
+    // after duration ends. 
+    // 'Finish' here works apsolutely the same, as in two previous methods.
+   
+          </code></pre>
+        </div>
+
+        <h2 class="text-center mb-20 mt-20">Display</h2>
+        <div class="modules-and-services-content block-center">
+          <pre><code class="language-js">
+    hide();
+
+    // This method dont takes any arguments, but you can use it in a chaining way.
+    // The aim of it is to hide your element, other word to set 'display' to 'none'. 
+    
+    // For example, if you run it like this, the body page would disappeare:
+    $('body').hide();
+
+    show();
+
+    // Opposite to previous one. This method removes 'none' of 'display' parameter,
+    // and set it to your default settings.
+
+    toggle();
+
+    // It's like two in one. If element visible, this methot would hide it,
+    // if opposite, your element would become visible.
+          </code></pre>
+        </div>
+
+        <h2 class="text-center mb-20 mt-20">Actions</h2>
+        <div class="modules-and-services-content block-center">
+          <pre><code class="language-js">
+   html(content);
+
+   // This method takes 'content', that you want to put into your
+   // element or elements. For example some HTML elements, or just text.
+
+   eq(index);
+
+   // This one takes 'index' of element, and returs you an object with this element.
+
+   index();
+
+   // Returns you index of element on which it was caused.
+
+   find(selector);
+
+   // Takes 'selector' of element that you want to find, and returs an object
+   // width this element or elements.
+
+   siblings(); 
+
+   // Returns an object with all sibling elements of the element on which it was caused.
+
+          </code></pre>
+        </div>
+
+        <h2 class="text-center mb-20 mt-20">Classes</h2>
+        <div class="modules-and-services-content block-center">
+          <pre><code class="language-js">
+   addClass(classNames);
+
+   // As you probably guessed, this method add classes or one class to element
+   // on which it was caused.
+
+   removeClass(classNames);
+
+   // The same as previous, but opposite.
+
+   toggleClass(className);
+
+   // This method takes only one class name, that you want to toggle. 
+          </code></pre>
+        </div>
+
+        <h2 class="text-center mb-20 mt-20">Atributes</h2>
+        <div class="modules-and-services-content block-center">
+          <pre><code class="language-js">
+   addAttribute(name, value);
+
+   // This one add attribte to an element. 'Name' is a name of attribute,
+   // 'value' is a value. Second argument is optional, as default it set in 'true'. 
+
+  deleteAttribute(name);
+  
+  // Deletes atribute from an element. Takes 'name' of attribute that you want,
+  // to be deteted. 
+
+  toggleAttribute(name);
+
+  // This method takes atribute 'name', that you want to toggle. 
+          </code></pre>
+        </div>
+
+        <h2 class="text-center mb-20 mt-20">Requests</h2>
+        <div class="modules-and-services-content block-center">
+          <pre><code class="language-js">
+  get(url, dataTypeAnswer);  
+  
+  // First argument is a link to server, from where you want to get data.
+  // Second argument is a type of data. Last argument is optional, as default it
+  // set to JSON. You can put 'text' or 'blob', as second argument, if you want 
+  // answer in such format. 
+
+  // This method returns promise, so you need to use JS native method 'then',
+  // to see desired result.
+
+  // For example, if you run such code:
+  $('body').get('https://jsonplaceholder.typicode.com/posts/1')
+  .then(json => console.log(json)); 
+
+  // In console you will see the following:
+
+  {
+    id: 1,
+    title: '[...]',
+    body: '[...]',
+    userId: 1
+  }
+
+  post(url, data, dataTypeAnswer)
+
+  // This method is for creating post on server. First argument is a link 
+  // to server, second one, is a data that you want to post, thrid one, format of
+  // answer. Last one is optional, as default it set to 'text'. It can also be,
+  // 'json' or 'blob'.
+
+  // Same as previous, this method returns promise.
+          </code></pre>
+        </div>
       </div>
     </div>
 
@@ -117,13 +347,13 @@
         <h2 class="text-center mb-20 mt-20">Align</h2>
         <div class="classes-content block-center">
           <pre><code>
-                    .text-center {
-                        text-align: center;
-                    }
-                    
-                    .block-center {
-                        margin: 0 auto;
-                    }
+    .text-center {
+        text-align: center;
+    }
+
+    .block-center {
+        margin: 0 auto;
+    }
                 </code></pre>
         </div>
 
@@ -444,13 +674,13 @@
             <div class="carousel-inner">
               <div class="carousel-slides">
                 <div class="carousel-item">
-                  <img src="./Images/car1.jpeg" alt="img" />
+                  <img src="./Images/carousel-pic-1.jpeg" alt="img" />
                 </div>
                 <div class="carousel-item">
-                  <img src="./Images/car2.jpg" alt="img" />
+                  <img src="./Images/carousel-pic-2.jpg" alt="img" />
                 </div>
                 <div class="carousel-item">
-                  <img src="./Images/car3.jpg" alt="img" />
+                  <img src="./Images/carousel-pic-3.jpg" alt="img" />
                 </div>
               </div>
             </div>
@@ -1437,7 +1667,12 @@ $.prototype.modal = function (created) {
       </section>
     </div>
 
-    <footer>hello</footer>
+    <footer>
+      <a href="https://github.com/dmkznk/UI_Liblary" target="blank">
+        <i class="fab fa-github"></i>
+        Repository
+      </a>
+    </footer>
 
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.0/build/highlight.min.js"></script>
     <script src="js/lib.js"></script>
