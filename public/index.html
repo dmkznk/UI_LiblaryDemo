@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UI Lib</title>
+    <title>UI Library</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
@@ -35,8 +35,8 @@
     <div class="main page active" id="getStarted">
       <div class="container">
         <div class="get-started block-center mb-20">
-          <div class="get-started-download">
-            <h4 class="mb-10">Click to download JS and CSS files</h4>
+          <div class="get-started-download p-20">
+            <h4 class="mb-20">Click to download JS and CSS files</h4>
             <div class="d-flex">
               <a class="linkJS" href="./js/lib.js" download></a>
               <a class="linkCSS" href="./scss/lib.css" download></a>
@@ -73,7 +73,7 @@
 
     // This method takes one argument (selector), and it always returs you an object
     // with your elemet, or elemets. 
-    // Also this object always have all another methods of the library in it's __proto__. 
+    // Also this object always have all other methods of the library in it's __proto__. 
 
     // IMPORTANT to know, that almost every method here returns you object which contains
     // __proto__ with all other methods of the library.
@@ -302,6 +302,24 @@
 
     <div class="classes page" id="classes">
       <div class="container">
+        <div class="classes-content block-center p-20">
+          <h4 class="mb-20">Here are some useful style settings in HTML classes</h4>
+          <p class="mb-10">
+            To use it, just add one or several of this classes to an element in HTML
+          </p>
+          <span>For example:</span>
+          <pre class="mt-10 mb-10 language-html"><code>
+  &lt;div class="d-flex f-center p-20">&lt;/div>
+          </code></pre>
+          <span class="">Such classes would set this element styles to:</span>
+          <pre class="mt-10 mb-10 language-css"><code>
+  {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+        </code></pre>
+        </div>
         <h2 class="text-center mb-20 mt-20">Display</h2>
         <div class="classes-content block-center">
           <pre><code>
@@ -545,8 +563,28 @@
 
     <div class="components page" id="components">
       <!-- dropdown -->
+
       <section>
         <div class="container d-flex f-center fd-colum">
+          <div class="components-content p-20">
+            <h4 class="mb-10">
+              Some of the most common components which you can easily add to your project
+            </h4>
+            <p>
+              To add any of this components to your project, just copy HTML code, and paste into
+              your HTML file.
+              <br />
+              <br />
+              You can also change whatever you want, but attributes and classes here are IMPORTANT,
+              so if you need some other classes or attributes, just add them to those that already
+              exist.
+              <br />
+              <br />
+              Also you can find SCSS code of this components. It shown for better understanding of
+              this components style, in case you would need to overwrite some of style parameters.
+            </p>
+          </div>
+
           <div class="wrap">
             <h2 class="text-center mb-20 mt-20">Dropdown menu</h2>
             <div class="dropdown">
@@ -570,10 +608,9 @@
             <div class="tab-panel" data-tabpanel>
               <div class="tab-item tab-item--active">HTML</div>
               <div class="tab-item">SCSS</div>
-              <div class="tab-item">JS</div>
             </div>
             <div class="tab-content tab-content--active tab-custom-content">
-              <pre><code class="lang-html">
+              <pre><code class="language-html">
     &lt;div class="dropdown">
         &lt;button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton">
             Dropdown example
@@ -593,7 +630,7 @@
                         </code></pre>
             </div>
             <div class="tab-content tab-custom-content">
-              <pre><code class="lang-css">
+              <pre><code class="language-css">
     .dropdown {
         position: relative;
         display: inline-block;
@@ -642,20 +679,6 @@
     }
                         </code></pre>
             </div>
-            <div class="tab-content tab-custom-content">
-              <pre><code class="lang-css">
-    $.prototype.dropdown = function () {
-        for (let i = 0; i < this.length; i++) {
-            const id = this[i].getAttribute('id');
-        
-            $(this[i]).click(() => {
-            $(`[data-toggle-id="${id}"]`).fadeToggle(300);
-            });
-        }
-        };
-        $('.dropdown-toggle').dropdown();
-                        </code></pre>
-            </div>
           </div>
         </div>
       </section>
@@ -698,7 +721,6 @@
             <div class="tab-panel" data-tabpanel>
               <div class="tab-item tab-item--active">HTML</div>
               <div class="tab-item">SCSS</div>
-              <div class="tab-item">JS</div>
             </div>
             <div class="tab-content tab-content--active tab-custom-content">
               <pre><code class="language-html"> 
@@ -828,78 +850,6 @@
     }
                         </code></pre>
             </div>
-            <div class="tab-content tab-custom-content">
-              <pre><code class="language-js"> 
-    $.prototype.carousel = function () {
-        for (let i = 0; i < this.length; i++) {
-            const width = window.getComputedStyle(this[i].querySelector('.carousel-inner')).width;
-            const slides = this[i].querySelectorAll('.carousel-item');
-            const slidesField = this[i].querySelector('.carousel-slides');
-            const indicators = this[i].querySelectorAll('.carousel-indicators li');
-        
-            slidesField.style.width = 100 * slides.length + '%';
-            slides.forEach(slide => (slide.style.width = width));
-        
-            let offset = 0;
-            let slideIndex = 0;
-        
-            $(this[i].querySelector('[data-slide="next"]')).click(e => {
-            e.preventDefault();
-            if (offset == +width.replace(/\D/g, '') * (slides.length - 1)) {
-                offset = 0;
-            } else {
-                offset += +width.replace(/\D/g, '');
-            }
-        
-            slidesField.style.transform = `translateX(-${offset}px)`;
-        
-            if (slideIndex == slides.length - 1) {
-                slideIndex = 0;
-            } else {
-                slideIndex++;
-            }
-        
-            indicators.forEach(indicator => indicator.classList.remove('active'));
-            indicators[slideIndex].classList.add('active');
-            });
-        
-            $(this[i].querySelector('[data-slide="prev"]')).click(e => {
-            e.preventDefault();
-            if (offset == 0) {
-                offset = +width.replace(/\D/g, '') * (slides.length - 1);
-            } else {
-                offset -= +width.replace(/\D/g, '');
-            }
-        
-            slidesField.style.transform = `translateX(-${offset}px)`;
-        
-            if (slideIndex == 0) {
-                slideIndex = slides.length - 1;
-            } else {
-                slideIndex--;
-            }
-        
-            indicators.forEach(indicator => indicator.classList.remove('active'));
-            indicators[slideIndex].classList.add('active');
-            });
-        
-            const sliderId = this[i].getAttribute('id');
-            $(`#${sliderId} .carousel-indicators li`).click(e => {
-            const slideTo = e.target.getAttribute('data-slide-to');
-        
-            slideIndex = slideTo;
-            offset = +width.replace(/\D/g, '') * slideTo;
-        
-            slidesField.style.transform = `translateX(-${offset}px)`;
-            indicators.forEach(indicator => indicator.classList.remove('active'));
-            indicators[slideIndex].classList.add('active');
-            });
-        }
-        };
-        
-        $('.carousel').carousel();
-                        </code></pre>
-            </div>
           </div>
         </div>
       </section>
@@ -940,7 +890,6 @@
             <div class="tab-panel" data-tabpanel>
               <div class="tab-item tab-item--active">HTML</div>
               <div class="tab-item">SCSS</div>
-              <div class="tab-item">JS</div>
             </div>
             <div class="tab-content tab-content--active tab-custom-content">
               <pre><code class="language-html">
@@ -1017,27 +966,6 @@
     }
                         </code></pre>
             </div>
-            <div class="tab-content tab-custom-content">
-              <pre><code class="language-js">
-    $.prototype.tab = function () {
-        for (let i = 0; i < this.length; i++) {
-            $(this[i]).on('click', () => {
-            $(this[i])
-                .addClass('tab-item--active')
-                .siblings()
-                .removeClass('tab-item--active')
-                .closest('.tab')
-                .find('.tab-content')
-                .removeClass('tab-content--active')
-                .eq($(this[i]).index())
-                .addClass('tab-content--active');
-            });
-        }
-        };
-        
-        $('[data-tabpanel] .tab-item').tab();
-                        </code></pre>
-            </div>
           </div>
         </div>
       </section>
@@ -1073,7 +1001,6 @@
             <div class="tab-panel" data-tabpanel>
               <div class="tab-item tab-item--active">HTML</div>
               <div class="tab-item">SCSS</div>
-              <div class="tab-item">JS</div>
             </div>
             <div class="tab-content tab-content--active tab-custom-content">
               <pre><code class="language-html">
@@ -1143,31 +1070,6 @@
             padding: 20px;
         }
     }
-                        </code></pre>
-            </div>
-            <div class="tab-content tab-custom-content">
-              <pre><code class="language-js">
-    $.prototype.accordion = function (
-        headActive = 'accordion-head--active',
-        contentActive = 'accordion-content--active',
-        paddings = 40
-        ) {
-        for (let i = 0; i < this.length; i++) {
-            $(this[i]).click(() => {
-            $(this[i]).toggleClass(headActive);
-            $(this[i].nextElementSibling).toggleClass(contentActive);
-        
-            if (this[i].classList.contains(headActive)) {
-                this[i].nextElementSibling.style.height =
-                this[i].nextElementSibling.scrollHeight + paddings + 'px';
-            } else {
-                this[i].nextElementSibling.style.height = '0px';
-            }
-            });
-        }
-        };
-        
-        $('.accordion-head').accordion();
                         </code></pre>
             </div>
           </div>
@@ -1290,101 +1192,6 @@
             padding: 15px;
         }
         }
-                        </code></pre>
-            </div>
-            <div class="tab-content tab-custom-content">
-              <pre><code class="language-js">
-$.prototype.modal = function (created) {
-    const scroll = calcScroll();
-    
-    for (let i = 0; i < this.length; i++) {
-        const target = this[i].getAttribute('data-target');
-    
-        $(this[i]).click(e => {
-        e.preventDefault();
-        $(target).fadeIn(500);
-        document.body.style.overflow = 'hidden';
-        document.body.style.marginRight = `${scroll}px`;
-        });
-    
-        const closeElements = document.querySelectorAll(`${target} [data-close]`);
-        closeElements.forEach(elem => {
-        $(elem).click(() => {
-            $(target).fadeOut(500);
-            smoothClose();
-        });
-        });
-    
-        $(target).click(e => {
-        if (e.target.classList.contains('modal')) {
-            $(target).fadeOut(500);
-            smoothClose();
-        }
-        });
-    
-        const smoothClose = () => {
-        setTimeout(() => {
-            document.body.style.overflow = '';
-            document.body.style.marginRight = '';
-    
-            if (created) document.querySelector(target).remove();
-        }, 500);
-        };
-    }
-    };
-    
-    $('[data-toggle="modal"]').modal();
-    
-    $.prototype.createModal = function ({ text, btns } = {}) {
-    for (let i = 0; i < this.length; i++) {
-        let modal = document.createElement('div');
-        modal.classList.add('modal');
-        modal.setAttribute('id', this[i].getAttribute('data-target').slice(1));
-    
-        // btns = { count: num, settings: [[text, ((classNames = []), close, cb)]]};
-    
-        const buttons = [];
-        for (let j = 0; j < btns.count; j++) {
-        let btn = document.createElement('button');
-        btn.classList.add('btn', ...btns.settings[j][1]);
-        btn.textContent = btns.settings[j][0];
-        if (btns.settings[j][2]) {
-            btn.setAttribute('data-close', 'true');
-        }
-        if (btns.settings[j][3] && typeof btns.settings[j][3] === 'function') {
-            btn.addEventListener('click', btns.settings[j][3]);
-        }
-    
-        buttons.push(btn);
-        }
-    
-        modal.innerHTML = `
-                &lt;div class="modal-dialog">
-                &lt;div class="modal-content">
-                    &lt;button class="close" data-close>
-                        &lt;span>&times;&lt;/span>
-                    &lt;/button>
-                    &lt;div class="modal-header">
-                        &lt;div class="modal-title">
-                            ${text.title}
-                        &lt;/div>
-                    &lt;/div>
-                    &lt;div class="modal-body">
-                        ${text.body}
-                    &lt;/div>
-                    &lt;div class="modal-footer">
-                    &lt;/div>
-                &lt;/div>
-            &lt;/div>
-        `;
-    
-        modal.querySelector('.modal-footer').append(...buttons);
-        document.body.append(modal);
-    
-        $(this[i]).modal(true);
-        $(this[i].getAttribute('data-target')).fadeIn(500);
-    }
-    };
                         </code></pre>
             </div>
           </div>

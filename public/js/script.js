@@ -5,10 +5,6 @@ document.addEventListener('DOMContentLoaded', event => {
 
   navigation('nav', 'nav a', '.page', 'active');
   fixScrollModal();
-
-  $('body')
-    .get('https://jsonplaceholder.typicode.com/posts/1')
-    .then(j => console.log(j));
 });
 
 const navigation = (navSelector, linksSelector, pagesSelector, activeClass) => {

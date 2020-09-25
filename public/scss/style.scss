@@ -6,6 +6,10 @@ a {
   text-decoration: none;
 }
 
+h4 {
+  font-size: 17px;
+}
+
 header {
   background-color: #025fff;
   position: fixed;
@@ -49,36 +53,32 @@ header {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 4px;
 
-    &-download {
-      padding: 20px;
-      font-size: 17px;
+    .linkJS,
+    .linkCSS {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100px;
+      width: 100px;
+    }
 
-      .linkJS,
-      .linkCSS {
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100px;
-        width: 100px;
-      }
+    .linkJS {
+      background-image: url(../Images/jsLogo.png);
+      margin-right: 20px;
+    }
 
-      .linkJS {
-        background-image: url(../Images/jsLogo.png);
-        margin-right: 20px;
-      }
-
-      .linkCSS {
-        background-image: url(../Images/cssLogo.png);
-        height: 90px;
-        width: 90px;
-        margin-top: 5px;
-      }
+    .linkCSS {
+      background-image: url(../Images/cssLogo.png);
+      height: 90px;
+      width: 90px;
+      margin-top: 5px;
     }
   }
 }
 
 .classes,
-.modules-and-services {
+.modules-and-services,
+.components {
   &-content {
     width: 700px;
     border: 1px solid rgba(0, 0, 0, 0.1);
