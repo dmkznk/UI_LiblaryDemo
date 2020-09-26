@@ -562,11 +562,18 @@
     </div>
 
     <div class="components page" id="components">
-      <!-- dropdown -->
-
+      <!-- about components -->
       <section>
-        <div class="container d-flex f-center fd-colum">
-          <div class="components-content p-20">
+        <div class="container">
+          <div
+            class="about-components p-20 block-center"
+            style="
+              width: 700px;
+              border: 1px solid rgba(0, 0, 0, 0.1);
+              border-radius: 4px;
+              max-height: 400px;
+            "
+          >
             <h4 class="mb-10">
               Some of the most common components which you can easily add to your project
             </h4>
@@ -584,7 +591,12 @@
               this components style, in case you would need to overwrite some of style parameters.
             </p>
           </div>
+        </div>
+      </section>
 
+      <!-- dropdown -->
+      <section>
+        <div class="container d-flex f-center fd-colum">
           <div class="wrap">
             <h2 class="text-center mb-20 mt-20">Dropdown menu</h2>
             <div class="dropdown">
@@ -1111,7 +1123,6 @@
             <div class="tab-panel" data-tabpanel>
               <div class="tab-item tab-item--active">HTML</div>
               <div class="tab-item">SCSS</div>
-              <div class="tab-item">JS</div>
             </div>
             <div class="tab-content tab-content--active tab-custom-content">
               <pre><code class="language-html">

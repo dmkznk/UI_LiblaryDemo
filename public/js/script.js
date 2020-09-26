@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', event => {
 
   navigation('nav', 'nav a', '.page', 'active');
   fixScrollModal();
+  btnPreventDefault();
 });
 
 const navigation = (navSelector, linksSelector, pagesSelector, activeClass) => {
@@ -55,4 +56,9 @@ const fixScrollModal = () => {
       smoothClose();
     }
   });
+};
+
+const btnPreventDefault = () => {
+  const allBtn = document.querySelectorAll('a');
+  allBtn.forEach(a => a.addEventListener('click', e => e.preventDefault()));
 };
